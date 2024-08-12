@@ -26,11 +26,23 @@
 function calcularBonus($lucros, $nome, $escala){
     if ($escala == 1){
         $resultado = $lucros * 0.1 / 100;
-        return ('O funcionário ',$nome,'receberá ',$resultado,);
+        return echo ('O funcionário '+$nome+'receberá '+$resultado);
+    }
+    else if($escala == 2){
+        $resultado = $lucros * 0.2 / 100;
+        return echo ('O funcionário '+$nome+'receberá '+$resultado);
+    }
+    else if($escala == 3){
+        $resultado = $lucros * 0.3 / 100;
+        return echo ('O funcionário '+$nome+'receberá '+$resultado);
+    }
+    else if($escala == 4){
+        $resultado = $lucros * 0.5 / 100;
+        return echo ('O funcionário '+$nome+'receberá '+$resultado);
     }
     else if($escala == 5){
         $resultado = $lucros * 0.7 / 100;
-        return ('O funcionário ',$nome,'receberá ',$resultado,);
+        return echo ('O funcionário '+$nome+'receberá '+$resultado);
     }
 }
 if ($_POST) {
