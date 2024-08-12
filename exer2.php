@@ -20,12 +20,11 @@
 
 <?php 
 function calcularSalario($valor_hora, $quantidade_hora){
-    $resultado = $hora_entrada->diff($hora_saida);
-    $resultado = $resultado->format("%H:%M");
+    $resultado = $valor_hora*$quantidade_hora;
     return $resultado;
 }
 if ($_POST) {
-    $hora_entrada = $_POST['hora_entrada'];
-    $hora_saida = $_POST['hora_saida'];
-    echo calcularTempo($hora_entrada, $hora_saida);
+    $valor_hora = $_POST['valor_hora'];
+    $quantidade_hora = $_POST['quantidade_hora'];
+    echo calcularSalario($valor_hora, $quantidade_hora);
 }require("rodape.php"); ?>
