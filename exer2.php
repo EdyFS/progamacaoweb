@@ -20,7 +20,7 @@
 
 <?php 
 function calcularSalario($valor_hora, $quantidade_hora){
-    $resultado = $valor_hora*$quantidade_hora;
+    $resultado = $valor_hora * $quantidade_hora;
     return $resultado;
 }
 if ($_POST) {
