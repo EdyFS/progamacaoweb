@@ -52,7 +52,26 @@ function calcularDisponibilidade($horas, $horas_disponiveis){
 function determinarTrabalho($complexidade, $experiencia){
     if ($experiencia == 'junior'){
         if ($complexidade == 'baixa'){
-            return ('Funcionário ')
+            return ('Funcionário está apto');
+        }
+        else{
+            return ('O funcionário não está apto');
+        }
+    }
+    else if ($experiencia == 'pleno'){
+        if ($complexidade == 'baixa' || $complexidade == 'média'){
+            return ('Funcionário está apto');
+        }
+        else{
+            return ('O funcionário não está apto');
+        }
+    }
+    else if ($experiencia == 'senior'){
+        if ($complexidade == 'média'|| $complexidade == 'alta'){
+            return ('Funcionário está apto');
+        }
+        else{
+            return ('O funcionário não está apto');
         }
     }
 }
