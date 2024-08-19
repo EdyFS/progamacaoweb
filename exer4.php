@@ -1,7 +1,7 @@
 <?php require("cabecalho.php"); ?>
 <h1>Exercicio 4 </h1>
 <form action="exer4.php" method="POST">
-<h1>Dados da tarefa do projeto</h1>
+<h2>Dados da tarefa do projeto</h2>
 <div class="row">
     <div class="col">
         <label for="nome">Nome da tarefa</label>
@@ -16,7 +16,7 @@
         <input type="name" id="complexidade" name="complexidade" class="fom-control"/>
     </div>
 </div>
-<h1>Dados do funcionário candidato</h1>
+<h2>Dados do funcionário candidato</h2>
 <div class="row">
     <div class="col">
         <label for="funcionario">Nome do funcionário</label>

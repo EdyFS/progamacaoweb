@@ -8,5 +8,16 @@
   </head>
   <body>
     <main class="container">
+      <nav>
+        <ul>
+          <li><a href = "exer1.php">Exercício 1</a></li>
+          <li><a href = "exer2.php">Exercício 2</a></li>
+          <li><a href = "exer3.php">Exercício 3</a></li>
+          <li><a href = "exer4.php">Exercício 4</a></li>
+          <li><a href = "exer5.php">Exercício 5</a></li>
+          <li><a href = "exer6.php">Exercício 6</a></li>
+          <li><a href = "exer7.php">Exercício 7</a></li>
+        </ul>
+      </nav>
 
     
