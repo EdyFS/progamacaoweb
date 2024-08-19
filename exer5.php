@@ -22,9 +22,9 @@ function calcularFerias($dias_trabalhados){
     }
     else{
         return 30;
-    }
-        
+    }    
 }
+
 if ($_POST) {
     $dias_trabalhados = $_POST['dias_trabalhados'];
     echo calcularFerias($dias_trabalhados);

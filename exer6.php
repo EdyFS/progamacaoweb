@@ -26,7 +26,6 @@
 function calcularMaoDeObra($horas, $taxa){
     $maoDeObra = $horas * $taxa;
     return $maoDeObra;
-        
 }
 
 function calcularTotal($maoDeObra, $custos){
@@ -35,6 +34,9 @@ function calcularTotal($maoDeObra, $custos){
         
 }
 if ($_POST) {
-    $dias_trabalhados = $_POST['dias_trabalhados'];
-    echo calcularFerias($dias_trabalhados);
+    $horas = $_POST['horas'];
+    $taxa = $_POST['taxa'];
+    $custos = $_POST['custos'];
+    echo calcularMaoDeObra($horas, $taxa);
+    echo calcularTotal($maoDeObra, $custos);
 }require("rodape.php"); ?>

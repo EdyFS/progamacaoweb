@@ -75,9 +75,14 @@ function determinarTrabalho($complexidade, $experiencia){
         }
     }
 }
+
 if ($_POST) {
-    $lucros = $_POST['lucros'];
+    $horas = $_POST['horas'];
     $nome = $_POST['nome'];
-    $escala = $_POST['escala'];
-    echo calcularBonus($lucros, $nome, $escala);
+    $complexidade = $_POST['complexidade'];
+    $funcionario = $_POST['funcionario'];
+    $horas_disponiveis = $_POST['horas_disponiveis'];
+    $experiencia = $_POST['experiencia'];
+    echo calcularDisponibilidade($horas, $horas_disponiveis);
+    determinarTrabalho($complexidade, $experiencia);
 }require("rodape.php"); ?>

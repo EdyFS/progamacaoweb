@@ -7,15 +7,15 @@
         <input type="number" id="prazo" name="prazo" class="fom-control"/>
     </div>
     <div class="col">
-        <label for="atividadesEstabelecidas">Taxa por hora dos funcionários</label>
+        <label for="atividadesEstabelecidas">Quantidade de atividades estabelecidas</label>
         <input type="number" id="atividadesEstabelecidas" name="atividadesEstabelecidas" class="fom-control"/>
     </div>
     <div class="col">
-        <label for="atividadesDesenvolvidas">Custos adicionais</label>
+        <label for="atividadesDesenvolvidas">Quantidade de atividades desenvolvidas</label>
         <input type="number" id="atividadesDesenvolvidas" name="atividadesDesenvolvidas" class="fom-control"/>
     </div>
     <div class="col">
-        <label for="atividadesDia">Custos adicionais</label>
+        <label for="atividadesDia">Quantidade de atividades por dia</label>
         <input type="number" id="atividadesDia" name="atividadesDia" class="fom-control"/>
     </div>
 </div>
@@ -33,12 +33,22 @@ function calcularPorcentagem($atividadesEstabelecidas, $atividadesDesenvolvidas)
         
 }
 
-function calcularTotal($maoDeObra, $custos){
-    $total = $maoDeObra + $custos;
-    return $maoDeObra;
+function calcularFinalizacao($atividadesDesenvolvidas, $atividadesEstabelecidas, $atividadesDia, $prazo){
+    $diferenca = $atividadesEstabelecidas - $atividadesDesenvolvidas;
+    $dias = $diferenca / $atividadesDia;
+    if ($prazo >= $dias){
+        return ("O projeto terminará no prazo");
+    }
+    else{
+        return ("O projeto não terminará no prazo");
+    }
         
 }
 if ($_POST) {
-    $dias_trabalhados = $_POST['dias_trabalhados'];
-    echo calcularFerias($dias_trabalhados);
+    $atividadesDesenvolvidas = $_POST['atividadesDesenvolvidas'];
+    $atividadesEstabelecidas = $_POST['atividadesEstabelecidas'];
+    $atividadesDia = $_POST['atividadesDia'];
+    $prazo = $_POST['prazo'];
+    calcularPorcentagem($atividadesEstabelecidas, $atividadesDesenvolvidas);
+    calcularFinalizacao($atividadesDesenvolvidas, $atividadesEstabelecidas, $atividadesDia, $prazo);
 }require("rodape.php"); ?>
