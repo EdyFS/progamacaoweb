@@ -30,7 +30,7 @@ function calcularMaoDeObra($horas, $taxa){
 
 function calcularTotal($maoDeObra, $custos){
     $total = $maoDeObra + $custos;
-    return $maoDeObra;
+    return $total;
         
 }
 if ($_POST) {

@@ -29,7 +29,7 @@
 <?php 
 function calcularPorcentagem($atividadesEstabelecidas, $atividadesDesenvolvidas){
     $porcentgem = $atividadesDesenvolvidas /$atividadesEstabelecidas * 100;
-    return ("Foi desenvolvido " + $porcentgem + "% do projeto");
+    return ("Foi desenvolvido " . $porcentgem . "% do projeto");
         
 }
 
@@ -49,6 +49,6 @@ if ($_POST) {
     $atividadesEstabelecidas = $_POST['atividadesEstabelecidas'];
     $atividadesDia = $_POST['atividadesDia'];
     $prazo = $_POST['prazo'];
-    calcularPorcentagem($atividadesEstabelecidas, $atividadesDesenvolvidas);
-    calcularFinalizacao($atividadesDesenvolvidas, $atividadesEstabelecidas, $atividadesDia, $prazo);
+    echo calcularPorcentagem($atividadesEstabelecidas, $atividadesDesenvolvidas);
+    echo calcularFinalizacao($atividadesDesenvolvidas, $atividadesEstabelecidas, $atividadesDia, $prazo);
 }require("rodape.php"); ?>

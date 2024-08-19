@@ -24,7 +24,7 @@
     </div>
     <div class="col">
         <label for="horas_disponiveis">Total de horas disponíveis</label>
-        <input type="number" id="horas" name="horas" class="fom-control"/>
+        <input type="number" id="horas_disponiveis" name="horas_disponiveis" class="fom-control"/>
     </div>
     <div class="col">
         <label for="experiencia">Nível de Experiência</label>
