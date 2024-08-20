@@ -9,7 +9,7 @@ class Livro {
         // __ é um chamado método mágico
         $this->titulo = $titulo; //referenciar, $vai no this e não no atributo
         $this->autor = $autor;
-        $this->ano = $ano;
+        $this->setAno($ano);
 
     }
 
@@ -42,4 +42,5 @@ class Livro {
 
 }
 
-$obj = new Livro("O Livro", "Ana", "2024");
+$obj = new Livro("O Livro", "Ana", 1850);
+var_dump($obj);
