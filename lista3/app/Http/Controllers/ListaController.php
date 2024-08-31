@@ -16,12 +16,12 @@ class ListaController extends Controller
     }
 
     public function mostrarExer2(){
-        return view("exer1");
+        return view("exer2");
     }
     public function calcularExer2(Request $request){
         $valor1 = (int)$request->input('valor1');
         $valor2 = (int)$request->input('valor2');
-        return $valor1+$valor2;
+        return $valor1-$valor2;
     }
 
     public function mostrarExer3(){
