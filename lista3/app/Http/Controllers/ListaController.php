@@ -117,30 +117,28 @@ class ListaController extends Controller
     }
 
     public function mostrarExer13(){
-        return view("exer1");
+        return view("exer13");
     }
     public function calcularExer13(Request $request){
-        $valor1 = (int)$request->input('valor1');
-        $valor2 = (int)$request->input('valor2');
-        return $valor1+$valor2;
+        $metro = (int)$request->input('metro');
+        return $metro * 100;
     }
 
     public function mostrarExer14(){
-        return view("exer1");
+        return view("exer14");
     }
     public function calcularExer14(Request $request){
-        $valor1 = (int)$request->input('valor1');
-        $valor2 = (int)$request->input('valor2');
-        return $valor1+$valor2;
+        $quilometro = (int)$request->input('quilometro');
+        return $quilometro * 0.621371;
     }
 
     public function mostrarExer15(){
-        return view("exer1");
+        return view("exer15");
     }
     public function calcularExer15(Request $request){
-        $valor1 = (int)$request->input('valor1');
-        $valor2 = (int)$request->input('valor2');
-        return $valor1+$valor2;
+        $altura = (double)$request->input('altura');
+        $massa = (float)$request->input('massa');
+        return $massa / ($altura**2);
     }
 
     public function mostrarExer16(){
