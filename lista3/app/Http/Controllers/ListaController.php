@@ -62,38 +62,36 @@ class ListaController extends Controller
     }
     public function calcularExer6(Request $request){
         $temperatura = (int)$request->input('temperatura');
-        return ($temperatura * 9 / 5) - 32;
+        return ($temperatura * 9 / 5) + 32;
     }
     
     public function mostrarExer7(){
-        return view("exer1");
+        return view("exer7");
     }
     public function calcularExer7(Request $request){
-        $valor1 = (int)$request->input('valor1');
-        $valor2 = (int)$request->input('valor2');
-        return $valor1+$valor2;
+        $temperatura = (int)$request->input('temperatura');
+        return ($temperatura -32) * 5 / 9 ;
     }
 
     public function mostrarExer8(){
-        return view("exer1");
+        return view("exer8");
     }
     public function calcularExer8(Request $request){
-        $valor1 = (int)$request->input('valor1');
-        $valor2 = (int)$request->input('valor2');
-        return $valor1+$valor2;
+        $altura = (int)$request->input('altura');
+        $largura = (int)$request->input('largura');
+        return $altura*$largura;
     }
 
     public function mostrarExer9(){
-        return view("exer1");
+        return view("exer9");
     }
     public function calcularExer9(Request $request){
-        $valor1 = (int)$request->input('valor1');
-        $valor2 = (int)$request->input('valor2');
-        return $valor1+$valor2;
+        $raio = (int)$request->input('raio');
+        return $raio**2 * 3.14;
     }
 
     public function mostrarExer10(){
-        return view("exer1");
+        return view("exer10");
     }
     public function calcularExer10(Request $request){
         $valor1 = (int)$request->input('valor1');

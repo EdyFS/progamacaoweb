@@ -24,3 +24,12 @@ Route::post('/respostaexer5', [ListaController::class, 'calcularExer5']);
 
 Route::get('/exer6', [ListaController::class, 'mostrarExer6']);
 Route::post('/respostaexer6', [ListaController::class, 'calcularExer6']);
+
+Route::get('/exer7', [ListaController::class, 'mostrarExer7']);
+Route::post('/respostaexer7', [ListaController::class, 'calcularExer7']);
+
+Route::get('/exer8', [ListaController::class, 'mostrarExer8']);
+Route::post('/respostaexer8', [ListaController::class, 'calcularExer8']);
+
+Route::get('/exer9', [ListaController::class, 'mostrarExer9']);
+Route::post('/respostaexer9', [ListaController::class, 'calcularExer9']);
