@@ -142,21 +142,22 @@ class ListaController extends Controller
     }
 
     public function mostrarExer16(){
-        return view("exer1");
+        return view("exer16");
     }
     public function calcularExer16(Request $request){
-        $valor1 = (int)$request->input('valor1');
-        $valor2 = (int)$request->input('valor2');
-        return $valor1+$valor2;
+        $preco = (int)$request->input('preco');
+        $desconto = (int)$request->input('desconto');
+        return $preco - ($preco * $desconto / 100);
     }
 
     public function mostrarExer17(){
-        return view("exer1");
+        return view("exer17");
     }
     public function calcularExer17(Request $request){
-        $valor1 = (int)$request->input('valor1');
-        $valor2 = (int)$request->input('valor2');
-        return $valor1+$valor2;
+        $capital = (int)$request->input('capital');
+        $taxa = (int)$request->input('taxa');
+        $periodo = (int)$request->input('periodo');
+        return $capital*$taxa*$periodo;
     }
 
     public function mostrarExer18(){
