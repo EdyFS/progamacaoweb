@@ -175,10 +175,10 @@ class ListaController extends Controller
     }
     public function calcularExer19(Request $request){
         $dias = (int)$request->input('dias');
-        $horas = $dias / 24;
-        $minutos = ($dias % 24) / 60;
-        $segundos = (($dias % 24) % 60) / 60;
-        return ($horas + " horas, " + $minutos + " minutos, " + $segundos + " segundos");
+        $horas = $dias * 24;
+        $minutos = $horas * 60;
+        $segundos = $minutos * 60;
+        return ($horas . " horas, " . $minutos . " minutos, " . $segundos . " segundos");
     }
 
     public function mostrarExer20(){
@@ -187,6 +187,6 @@ class ListaController extends Controller
     public function calcularExer20(Request $request){
         $distancia = (int)$request->input('distancia');
         $tempo = (int)$request->input('tempo');
-        return $distancia / $tempo;
+        return $distancia / $tempo ;
     }
 }
