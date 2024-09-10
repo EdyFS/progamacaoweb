@@ -161,29 +161,32 @@ class ListaController extends Controller
     }
 
     public function mostrarExer18(){
-        return view("exer1");
+        return view("exer18");
     }
     public function calcularExer18(Request $request){
-        $valor1 = (int)$request->input('valor1');
-        $valor2 = (int)$request->input('valor2');
-        return $valor1+$valor2;
+        $capital = (int)$request->input('capital');
+        $taxa = (int)$request->input('taxa');
+        $periodo = (int)$request->input('periodo');
+        return $capital*((1 + $taxa)**$periodo);
     }
 
     public function mostrarExer19(){
-        return view("exer1");
+        return view("exer19");
     }
     public function calcularExer19(Request $request){
-        $valor1 = (int)$request->input('valor1');
-        $valor2 = (int)$request->input('valor2');
-        return $valor1+$valor2;
+        $dias = (int)$request->input('dias');
+        $horas = $dias / 24;
+        $minutos = ($dias % 24) / 60;
+        $segundos = (($dias % 24) % 60) / 60;
+        return ($horas + " horas, " + $minutos + " minutos, " + $segundos + " segundos");
     }
 
     public function mostrarExer20(){
-        return view("exer1");
+        return view("exer20");
     }
     public function calcularExer20(Request $request){
-        $valor1 = (int)$request->input('valor1');
-        $valor2 = (int)$request->input('valor2');
-        return $valor1+$valor2;
+        $distancia = (int)$request->input('distancia');
+        $tempo = (int)$request->input('tempo');
+        return $distancia / $tempo;
     }
 }
