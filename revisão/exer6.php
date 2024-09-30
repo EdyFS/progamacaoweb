@@ -23,12 +23,13 @@
 </form>
 
 <?php 
-function calcularMaoDeObra($horas, $taxa){
+/*function calcularMaoDeObra($horas, $taxa){
     $maoDeObra = $horas * $taxa;
     return $maoDeObra;
-}
+}*/
 
-function calcularTotal($maoDeObra, $custos){
+function calcularTotal($horas, $taxa, $custos){
+    $maoDeObra = $horas * $taxa;
     $total = $maoDeObra + $custos;
     return $total;
         
@@ -37,6 +38,6 @@ if ($_POST) {
     $horas = $_POST['horas'];
     $taxa = $_POST['taxa'];
     $custos = $_POST['custos'];
-    echo calcularMaoDeObra($horas, $taxa);
-    echo calcularTotal($maoDeObra, $custos);
+    //echo calcularMaoDeObra($horas, $taxa);
+    echo calcularTotal($horas, $taxa, $custos);
 }require("rodape.php"); ?>

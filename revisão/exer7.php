@@ -49,6 +49,6 @@ if ($_POST) {
     $atividadesEstabelecidas = $_POST['atividadesEstabelecidas'];
     $atividadesDia = $_POST['atividadesDia'];
     $prazo = $_POST['prazo'];
-    echo calcularPorcentagem($atividadesEstabelecidas, $atividadesDesenvolvidas);
-    echo calcularFinalizacao($atividadesDesenvolvidas, $atividadesEstabelecidas, $atividadesDia, $prazo);
+    echo calcularPorcentagem($atividadesEstabelecidas, $atividadesDesenvolvidas)."<br>";
+    echo calcularFinalizacao($atividadesDesenvolvidas, $atividadesEstabelecidas, $atividadesDia, $prazo)."<br>";
 }require("rodape.php"); ?>
