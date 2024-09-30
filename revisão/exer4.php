@@ -16,6 +16,7 @@
         <input type="name" id="complexidade" name="complexidade" class="fom-control"/>
     </div>
 </div>
+<br>
 <h2>Dados do funcionário candidato</h2>
 <div class="row">
     <div class="col">
@@ -31,6 +32,7 @@
         <input type="name" id="experiencia" name="experiencia" class="fom-control"/>
     </div>
 </div>
+<br>
 <div class="row">
     <div class="col">
         <button type="submit" class="btn btn-success">Calcular</button>
@@ -83,6 +85,6 @@ if ($_POST) {
     $funcionario = $_POST['funcionario'];
     $horas_disponiveis = $_POST['horas_disponiveis'];
     $experiencia = $_POST['experiencia'];
-    echo calcularDisponibilidade($horas, $horas_disponiveis);
-    determinarTrabalho($complexidade, $experiencia);
+    echo calcularDisponibilidade($horas, $horas_disponiveis)."<br>";
+    echo determinarTrabalho($complexidade, $experiencia)."<br>";
 }require("rodape.php"); ?>

@@ -18,10 +18,10 @@
 function calcularFerias($dias_trabalhados){
     $ferias = $dias_trabalhados / 30;
     if ($ferias <= 30){
-        return $ferias;
+        return ("Você tem direito a ".$ferias." dias de férias");
     }
     else{
-        return 30;
+        return ("Você tem direito a 30 dias de férias");
     }    
 }
 
