@@ -62,4 +62,7 @@ class Ponto {
     }
 
     function toString(): string
+    {
+
+    }
 }
