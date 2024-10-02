@@ -38,7 +38,7 @@ class Ponto {
 
     public function calcularDistnciaPontoObjeto(Ponto $outroPonto){
         $dx = $this->x - $outroPonto->getX();
-        $dy = $this->y - $OutroPonto->getY();
+        $dy = $this->y - $outroPonto->getY();
         $distancia = sqrt(($dx)**2 + ($dy)**2);
         return $distancia;
     }
