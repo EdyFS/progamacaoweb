@@ -75,10 +75,10 @@ public class Motorista extends Funcionario{
     private string $numeroCarteira;
 
     public Motorista(numeroCarteira){
-        public function getnumeroCarteira(): string{
+        public function getnumeroCarteira(): void{
             return $this->numeroCarteira;
         }
-        public function setnumeroSupervisao():string{
+        public function setnumeroSupervisao():void{
             $this->numeroCarteira = $numeroCarteira
         }
     }

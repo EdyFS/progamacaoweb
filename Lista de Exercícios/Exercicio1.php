@@ -61,7 +61,7 @@ class Ponto {
 
     }
 
-    function toString(): string
+    function toString(): void
     {
 
     }
