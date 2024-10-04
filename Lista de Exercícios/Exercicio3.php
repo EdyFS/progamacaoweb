@@ -1,35 +1,35 @@
 <?php
 
-class abstract Telefone{
+abstract class Telefone{
     private $DDD;
     private $numeroTelefone;
     private $tempoLigacao;
 
-    public getDDD(){
+    public function getDDD(){
         return $this->DDD;
     }
 
-    public setDDD(){
+    public function setDDD($DDD){
         $this->DDD = $DDD;
     }
 
-    public getnumeroTelefone(){
+    public function getnumeroTelefone(){
         return $this->numeroTelefone;
     }
 
-    public setnumeroTelefone(){
+    public function setnumeroTelefone($numeroTelefone){
         $this->numeroTelefone = $numeroTelefone;
     }
 
-    public gettempoLigacao(){
+    public function gettempoLigacao(){
         return $this->tempoLigacao;
     }
 
-    public settempoLigacao(){
+    public function settempoLigacao($tempoLigacao){
         $this->tempoLigacao = $tempoLigacao;
     }
 
-    public function calculaCusto($tempoLigacao){
+    public function calculaCusto($tempoLigacao, $custo){
         
     }
 }
@@ -37,49 +37,52 @@ class abstract Telefone{
 class Fixo extends Telefone{
     private $custo;
     
-    public getcusto(){
+    public function getcusto(){
         return $this->custo;
     }
 
-    public setcusto(){
+    public function setcusto($custo){
         $this->custo = $custo;
     }
 
-    public function calculaCusto($tempoLigacao){
+    public function calculaCusto($tempoLigacao, $custo){
         return $custo * $tempoLigacao;
     }
 }
 
-class abstract Celular extends Telefone{
+abstract class Celular extends Telefone{
     private $nomeOperadora;
     private $custoBase;
     
-    public getcustoBase(){
+    public function getcustoBase(){
         return $this->custoBase;
     }
 
-    public setcustoBase(){
+    public function setcustoBase($custoBase){
         $this->custoBase = $custoBase;
     }
 
-    public getnomeOperadora(){
+    public function getnomeOperadora(){
         return $this->nomeOperadora;
     }
 
-    public setnomeOperadora(){
+    public function setnomeOperadora($nomeOperadora){
         $this->nomeOperadora = $nomeOperadora;
     }
 
+    public function calculaCustoBase($custoBase){
+        
+    }
 }
 
 class PrePago extends Celular{
-    public function calculaCusto($tempoLigacao){
+    public function calculaCustoBase($custoBase){
         return $custoBase + ($custoBase * 40 / 100);
     }
 }
 
 class PosPago extends Celular{
-    public function calculaCusto($tempoLigacao){
+    public function calculaCustoBase($custoBase){
         return $custoBase - ($custoBase * 10 / 100);
     }
 }
